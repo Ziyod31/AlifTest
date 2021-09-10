@@ -34,4 +34,7 @@
   @endforeach
 </tbody>
 </table>
+
+{{ $emails->links() }}
+
 @endsection

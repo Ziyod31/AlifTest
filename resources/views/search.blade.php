@@ -1,7 +1,6 @@
 @extends('layouts.welcome')
 @section('content')
-
-
+@if($contacts->isNotEmpty())
 <table class="table">
   <thead>
     <tr>
@@ -13,7 +12,7 @@
     </tr>
   </thead>
   <tbody>
-   
+
     @foreach($contacts as $contact)
     <tr>
       <td>{{ $contact->id }}</td>
@@ -37,5 +36,9 @@
     @endforeach
   </tbody>
 </table>
-{{$contacts->links()}}
+@else
+<div>
+  <h3>No Contacts Found</h3>
+</div>
+@endif
 @endsection

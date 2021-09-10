@@ -15,7 +15,7 @@ class CreateEmailsTable extends Migration
     {
         Schema::create('emails', function (Blueprint $table) {
             $table->id();
-            $table->integer('contact_id');
+            $table->integer('contact_id')->nullable();
             $table->string('value')->unique();
             $table->timestamps();
         });

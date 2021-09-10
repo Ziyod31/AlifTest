@@ -15,7 +15,7 @@ class PhoneController extends Controller
      */
     public function index()
     {
-        $phones = Phone::all();
+        $phones = Phone::simplePaginate(10);
         return view('phones.phones')->with('phones', $phones);
     }
 

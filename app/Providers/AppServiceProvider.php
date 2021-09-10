@@ -26,7 +26,7 @@ class AppServiceProvider extends ServiceProvider
     {
         view()->composer('index', function($view)
         {
-            $contacts = Contact::latest()->paginate(10);
+            $contacts = Contact::simplePaginate(10);
             $view->with(compact('contacts'));    
         });
     }

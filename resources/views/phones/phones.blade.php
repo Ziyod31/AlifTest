@@ -34,4 +34,7 @@
   @endforeach
 </tbody>
 </table>
+
+  {{ $phones->links() }}
+
 @endsection

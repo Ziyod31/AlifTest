@@ -14,7 +14,7 @@ class ContactController extends Controller
      */
     public function index()
     {
-        $contacts = Contact::all();
+        $contacts = Contact::simplePaginate(10);
         return view('contacts.contacts')->with('contacts', $contacts);
     }
 

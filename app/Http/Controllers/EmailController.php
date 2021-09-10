@@ -15,7 +15,7 @@ class EmailController extends Controller
      */
     public function index()
     {
-        $emails = Email::all();
+        $emails = Email::simplePaginate(10);
         return view('emails.emails')->with('emails', $emails);
     }
 
